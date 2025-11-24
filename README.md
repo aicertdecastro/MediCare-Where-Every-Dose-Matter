@@ -1,129 +1,177 @@
-## MediCare - Personal Medication Management and Reminder System
+# 🌿 **MediCare**
 
-## 1. Project Title
-
-**MediCare** — Personal Medication Management and Reminder System
+### *Your Personal Medication Management & Reminder System*
 
 ---
 
-## 2. Description / Overview
+## 📌 **1. Project Title**
 
-MediCare is a Java console-based application designed to help users manage their medications effectively. It allows users to add, edit, and delete medications with details like name, dosage, instructions, and multiple scheduled date-time entries. The app features a background thread that provides real-time console reminders for upcoming doses, enables logging of medication intake (marking specific schedules as taken), and tracks a history of events including reminders, intake logs, and wellness feedback. This addresses the issue of missed medication doses by offering automated notifications and a simple record-keeping system. It is intended for educational purposes and personal use, not as a replacement for professional medical tools.
-
-**Key Features**
-- **CRUD Operations**: Add, edit, delete medications with validation (e.g., no past schedules).
-- **Multi-Schedule Support**: Each medication can have multiple date-time schedules entered as comma-separated values.
-- **Automated Reminders**: A daemon thread checks every 10 seconds and prints reminders in the console when a schedule is due and not yet taken or reminded.
-- **Intake Logging**: Log when a medication is taken for a specific schedule, marking it as taken (prevents future reminders for that schedule).
-- **History and Feedback**: View all records (reminders, intake, edits/deletes, feedback) and add wellness feedback with feelings and symptoms.
-- **Error Handling**: Custom exceptions for invalid inputs (e.g., empty fields, malformed schedules).
+**MediCare — Personal Medication Management and Reminder System**
+*A Java console application built to promote healthier, more mindful medication habits.*
 
 ---
 
-## 3. OOP Concepts Applied
+## 💡 **2. Description / Overview**
 
-### Encapsulation
-- Data in classes like `Medication` (e.g., `name`, `dosage`, `schedules`, `instructions`) and `Record` subclasses is private, with public getters/setters for controlled access. This protects internal state and ensures changes are validated (e.g., schedules are parsed and checked against the current time).
-- `MediCareManager` encapsulates arrays for medications and records, exposing only necessary methods like `add()` and `viewHistory()`.
+MediCare is a fully interactive Java console-based system designed to help individuals stay on track with their medications. Whether you’re managing daily vitamins, prescriptions, or long-term treatment schedules, MediCare makes it easier—through structured management, smart reminders, and detailed logging.
 
-### Inheritance
-- The abstract `Record` class serves as a base, providing common fields (`dateTime`, `description`) and an abstract `displayRecord()` method.
-- Subclasses `MedicationRecord`, `ReminderRecord`, and `FeedbackRecord` inherit from `Record`, adding specific fields (e.g., `Medication` in `MedicationRecord`) and overriding `displayRecord()` for customized output.
+The system allows you to:
 
-### Polymorphism
-- `MediCareManager` uses a `Record[]` array to store different record types. When displaying history, it calls `displayRecord()` polymorphically—the correct overridden method executes based on the object's runtime type (e.g., a `MedicationRecord` shows intake details, while a `ReminderRecord` shows reminder info).
-- The `Manageable` interface allows `MediCareManager` to be treated as a generic manager, enabling flexible method calls like `manager.add()`.
+* Add, update, or remove medication entries
+* Attach multiple date–time schedules
+* Receive real-time reminders through a background thread
+* Log medication intake
+* Track wellness feedback
+* Maintain a complete history of medication-related events
 
-### Abstraction
-- The `Record` abstract class hides the specifics of how different record types are displayed, requiring subclasses to implement `displayRecord()`.
-- The `Manageable` interface abstracts the CRUD operations, defining a contract (`add()`, `edit()`, `delete()`) without implementation details, allowing `MediCareManager` to focus on medication-specific logic.
-
-### Exception Handling
-- A custom `InvalidMedicationException` is used for validation errors (e.g., empty names, invalid schedule formats, or past dates).
-- Try-catch blocks in methods like `add()` and `logMedicationIntake()` handle parsing errors and user input issues gracefully, printing error messages without crashing the app.
+This tool’s purpose is simple: **to help reduce missed doses and promote mindful medication management**, especially for personal, educational, or learning use.
 
 ---
 
-## 4. Program Structure
+## 🌟 **Key Features at a Glance**
 
-The project follows a modular structure with separate files for each class. Below is the folder layout and a text-based class diagram showing relationships.
+✔️ **Medication CRUD**
+Create, edit, and delete medications—validated so you don’t accidentally schedule doses in the past.
+
+✔️ **Multi-Schedule Support**
+Add multiple date–time values in one line (comma-separated).
+
+✔️ **Smart Reminders**
+A background daemon thread scans every 10 seconds and notifies you when a scheduled dose is due.
+
+✔️ **Intake Logging**
+Mark specific schedules as “taken” and attach personal notes (e.g., *“taken after breakfast”*).
+
+✔️ **Wellness Feedback**
+Record how you feel, symptoms noticed, or any medication effects.
+
+✔️ **Comprehensive History Tracking**
+See reminders, intakes, edits, feedback—everything in one place.
+
+✔️ **Error-Resistant Design**
+Custom exceptions ensure all inputs are clean, valid, and safe.
+
+---
+
+## 🧬 **3. OOP Concepts Applied**
+
+MediCare is built with clean, modular, and well-structured Object-Oriented Programming principles:
+
+### 🔐 **Encapsulation**
+
+All fields in classes (like `Medication` and `Record`) are private. Getters, setters, and validated updates protect internal data and prevent inconsistent states.
+
+### 🧬 **Inheritance**
+
+A core `Record` abstract class is extended by specialized record types:
+
+* `MedicationRecord`
+* `ReminderRecord`
+* `FeedbackRecord`
+
+Each one adds its own unique data and behaviors.
+
+### 🎭 **Polymorphism**
+
+The `Record[]` array holds *all* record types.
+When you view history, `displayRecord()` triggers the correct version depending on the object's real type—clean, flexible, and powerful.
+
+### 🧼 **Abstraction**
+
+The `Manageable` interface defines the contract for CRUD operations.
+The `Record` abstract class handles shared logic but requires subclasses to implement their own display formatting.
+
+### ⚠️ **Exception Handling**
+
+With a custom `InvalidMedicationException`, the app prevents errors like:
+
+* Empty names
+* Invalid schedules
+* Incorrect date formats
+* Past date entries
+
+No crashes. Just clear, user-friendly messages.
+
+---
+
+## 🗂️ **4. Program Structure**
+
+Here’s how the project is organized:
 
 ```
 MediCare/
-├─ bin/                      
-├─ src/                      (source files)
-│  ├─ Main.java              (entry point with menu loop)
-│  ├─ MediCareManager.java   (core logic, implements Manageable)
-│  ├─ Medication.java        (entity for medication data)
-│  ├─ Record.java            (abstract base for records)
-│  ├─ MedicationRecord.java  (subclass for intake logs)
-│  ├─ ReminderRecord.java    (subclass for reminder events)
-│  ├─ FeedbackRecord.java    (subclass for wellness feedback)
-│  ├─ Manageable.java        (interface for CRUD operations)
-│  └─ InvalidMedicationException.java (custom exception)
-└─ README.md                 (this file)
+├─ src/
+│  ├─ Main.java
+│  ├─ MediCareManager.java
+│  ├─ Medication.java
+│  ├─ Record.java
+│  ├─ MedicationRecord.java
+│  ├─ ReminderRecord.java
+│  ├─ FeedbackRecord.java
+│  ├─ Manageable.java
+│  └─ InvalidMedicationException.java
+└─ README.md
 ```
 
-### Class Relationships (Text Diagram)
+### 🧩 **Class Relationship Overview**
+
 ```
 Manageable (interface)
-    ↑ implements
+        ↑
 MediCareManager
-    ├─ manages → Medication[] (array of medication objects)
-    ├─ manages → Record[]     (array of history records)
-    ├─ uses → Scanner         (for user input)
-    ├─ uses → DateTimeFormatter (for parsing/displaying dates)
-    └─ starts → Thread        (daemon for reminders)
+   ├─ manages → Medication[]
+   ├─ manages → Record[]
+   ├─ uses → Thread (daemon for reminders)
 
 Record (abstract)
-    ↑ extends
-├─ MedicationRecord (links to → Medication)
-├─ ReminderRecord
-└─ FeedbackRecord
+   ↑           ↑             ↑
+MedicationRecord   ReminderRecord   FeedbackRecord
 
 Medication
-    ├─ fields: name, dosage, instructions
-    ├─ schedules → List<LocalDateTime> (multiple date-times)
-    ├─ remindedSchedules → Set<LocalDateTime> (tracks reminded times)
-    └─ takenSchedules → Set<LocalDateTime> (tracks taken times)
+   ├─ name, dosage, instructions
+   ├─ schedules → List<LocalDateTime>
+   ├─ remindedSchedules → Set<LocalDateTime>
+   └─ takenSchedules → Set<LocalDateTime>
 ```
 
-**Program Responsibilities**
-- `Main`: Handles the console menu loop, reads user input, and delegates to `MediCareManager`.
-- `MediCareManager`: Implements the main logic, including CRUD for medications, reminder thread, record management, and input validation.
-- `Medication`: Represents a medication with its details and schedule tracking.
-- `Record` Hierarchy: Logs events; each subclass specializes in displaying its type (e.g., intake vs. reminder).
+---
+
+## ▶️ **5. How to Run the Program**
+
+### 🧰 **Files Required**
+
+Place these `.java` files in the same folder:
+
+```
+Main.java  
+MediCareManager.java  
+Medication.java  
+Record.java  
+MedicationRecord.java  
+ReminderRecord.java  
+FeedbackRecord.java  
+Manageable.java  
+InvalidMedicationException.java  
+```
+
+### 🚀 **Steps to Run**
+
+1. Open the folder in **VS Code** (or any Java IDE).
+2. Open all `.java` files to avoid dependency issues.
+3. Inside **Main.java**, run the program through the terminal or code runner.
+4. Use the number-based menu to navigate through the app:
+
+   * Add medications
+   * Log intake
+   * Record feedback
+   * View history
+   * And more
 
 ---
 
-## 5. How to Run the Program
+## 🖥️ **6. Sample Console Output**
 
-**Files Required**
-Place all the following `.java` files in the same directory:
-- `Main.java`
-- `MediCareManager.java`
-- `Medication.java`
-- `Record.java`
-- `MedicationRecord.java`
-- `ReminderRecord.java`
-- `FeedbackRecord.java`
-- `Manageable.java`
-- `InvalidMedicationException.java`
-
-**Step-by-Step Instructions**
-1. **Compile the Program**:
-   - Open a VS Code and open all the files inside the folder.
-   - Ensure that all the files are open as all of them are connected to each other and to make sure the program run accordingly.
-
-2. **Run the Program**:
-   - In the Main class which is the entry point of our program, run the program using the terminal.
-   - The console menu will appear, and you can interact by entering numbers (1-9) with each number having their own function.
-     
----
-
-## 6. Sample Output
-
-Below is a simulated short run of the program (console output). User inputs are shown in **bold**. Note: Reminders appear asynchronously when the thread detects a due schedule.
+*(User inputs shown in **bold**)*
 
 ```
 === MediCare Menu ===
@@ -139,108 +187,82 @@ Below is a simulated short run of the program (console output). User inputs are 
 
 Choose an option: 1
 Medication name: Aspirin
-Dosage (e.g. 500mg or 1 tablet): 100mg
-Schedules (comma-separated, e.g., 2023-10-01 08:00, 2023-10-01 14:00): 2025-11-30 08:00, 2025-11-30 20:00
+Dosage: 100mg
+Schedules: 2025-11-30 08:00, 2025-11-30 20:00
 Instructions: Take with food
 Medication added successfully.
-
-... (background thread checks every 10 seconds; when time reaches 2025-11-30 08:00)
-Reminder: Time to take Aspirin (100mg) at 2025-11-30 08:00
-
-=== MediCare Menu ===
-1. Add Medication
-2. Edit Medication
-3. Delete Medication
-4. View Reminders
-5. Log Medication Intake
-6. View Medication History
-7. Add Wellness Feedback
-8. View Medication List
-9. Exit
-
-Choose an option: 5
------Medication List-----
-1) Name: Aspirin | Dosage: 100mg | Schedules: 2025-11-30 08:00, 2025-11-30 20:00 | Instructions: Take with food
-Enter medication index you already took (starting at 1): 1
-Select the schedule you took it for:
-1) 2025-11-30 08:00
-2) 2025-11-30 20:00
-Enter schedule index (starting at 1): 1
-Additional note for medication intake: Taken after breakfast
-Medication intake logged for Aspirin at 2025-11-30 08:00
-
-=== MediCare Menu ===
-1. Add Medication
-2. Edit Medication
-3. Delete Medication
-4. View Reminders
-5. Log Medication Intake
-6. View Medication History
-7. Add Wellness Feedback
-8. View Medication List
-9. Exit
-
-Choose an option: 6
--- Medication History / Records --
-1) 2025-11-30 08:00:01 - Reminder: Medication reminder for Aspirin at 2025-11-30 08:00
-2) 2025-11-30 08:05:22 - Medication Taken: Aspirin (100mg) Taken after breakfast at 2025-11-30 08:00
-
-=== MediCare Menu ===
-1. Add Medication
-2. Edit Medication
-3. Delete Medication
-4. View Reminders
-5. Log Medication Intake
-6. View Medication History
-7. Add Wellness Feedback
-8. View Medication List
-9. Exit
-
-Choose an option: 9
-Exiting MediCare. Stay healthy!
 ```
 
-**Notes on Output**
-- Reminders print automatically in the console when due.
-- Logging intake marks the specific schedule as taken, preventing further reminders for it.
-- History shows all events with timestamps.
+⏳ *Then at the scheduled time...*
+
+```
+Reminder: Time to take Aspirin (100mg) at 2025-11-30 08:00
+```
+
+📝 **Logging Intake Example**
+
+```
+Choose an option: 5
+-----Medication List-----
+1) Aspirin | 100mg
+Select schedule: 1
+Additional note: Taken after breakfast
+Medication intake logged.
+```
+
+📚 **History Example**
+
+```
+-- Medication History --
+1) Reminder: Aspirin at 2025-11-30 08:00
+2) Medication Taken: Aspirin (Taken after breakfast)
+```
 
 ---
 
-## 7. Author and Acknowledgement
+## 👥 **7. Authors & Acknowledgements**
 
-**Author:** De Castro, Aicert Reimiel, Bulaon, Vhenise Rich Cole, Palicpic, Nicko, and Magtibay, Daiñell Jheff 
+**Authors:**
+De Castro, Aicert Reimiel
+Bulaon, Vhenise Rich Cole
+Palicpic, Nicko
+Magtibay, Daiñell Jheff
 
-**Institution:** CICS Batangas State University - Alangilan Campus  
+**Institution:**
+*CICS – Batangas State University, Alangilan Campus*
 
-**Date:** 2025-12-02  
+**Date:**
+*December 2, 2025*
 
-**Acknowledgements**  
-- Java Platform for robust exception handling and threading capabilities
-- Object-Oriented Programming principles that guided the architecture
-- Modern date/time APIs that simplified scheduling functionality
-- The healthcare community for inspiring medication adherence solutions
-  
----
+**Special Thanks**
 
-## 8. Other Sections
-
-### a) Future Enhancements
-- Database integration for persistent storage
-- Mobile application with push notifications
-- Email/SMS reminder capabilities
-- Drug interaction checking
-- Prescription refill tracking
-- Graphical user interface
-- Data export functionality (PDF reports)
-- Multi-user support with authentication
-- Integration with healthcare provider systems
-
-### b) References
-- Java Time API (java.time) for date/time management
-- Java Collections Framework concepts applied to custom arrays
-- Object-Oriented Programming principles and design patterns
-- Exception handling best practices
+* Java’s threading and date-time API
+* Object-Oriented Programming principles
+* Healthcare communities promoting medication adherence
 
 ---
 
+## 🚀 **8. Future Enhancements**
+
+Here’s what MediCare could evolve into:
+
+* 🗃️ Database support for saving data
+* 📱 Mobile app with push notifications
+* ✉️ Email or SMS reminders
+* 💊 Drug interaction alerts
+* 📊 PDF or CSV data exports
+* 🔐 Multi-user accounts with login
+* 🧠 AI-assisted medication insights
+* 🖥️ GUI version with dashboards
+
+---
+
+## 📚 **References**
+
+* Oracle Java Time API
+* Java Collections Framework
+* OOP Design Patterns
+* Exception Handling Concepts
+* Java Modules
+
+---
