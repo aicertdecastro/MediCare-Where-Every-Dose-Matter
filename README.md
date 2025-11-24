@@ -222,23 +222,62 @@ Medication intake logged.
 
 ## 👥 **7. Authors & Acknowledgements**
 
-**Authors:**
-De Castro, Aicert Reimiel
-Bulaon, Vhenise Rich Cole
-Palicpic, Nicko
-Magtibay, Daiñell Jheff
+<table>
+  <tr>
+    <th></th>
+    <th>Name</th>
+    <th>Role</th>
+  </tr>
 
-**Institution:**
-*CICS – Batangas State University, Alangilan Campus*
+  <tr>
+    <td><img src="static/aicert.jpg" width="100" height="100"></td>
+    <td>
+      <strong>De Castro, Aicert Reimiel</strong><br/>
+      <a href="https://github.com/aicertdecastro" target="_blank">
+        <img src="https://img.shields.io/badge/GitHub-%23121011.svg?logo=github&logoColor=white">
+      </a>
+    </td>
+    <td>Lead Developer</td>
+  </tr>
 
-**Date:**
-*December 2, 2025*
+  <tr>
+    <td><img src="static/vhenise.jpg" width="100" height="100"></td>
+    <td>
+      <strong>Bulaon, Vhenise Rich Cole</strong><br/>
+      <a href="https://github.com/Ghost-910" target="_blank">
+        <img src="https://img.shields.io/badge/GitHub-%23121011.svg?logo=github&logoColor=white">
+      </a>
+    </td>
+    <td>System Designer</td>
+  </tr>
 
-**Special Thanks**
+  <tr>
+    <td><img src="static/nicko.jpg" width="100" height="100"></td>
+    <td>
+      <strong>Palicpic, Nicko</strong><br/>
+      <a href="https://github.com/nickopalicpic" target="_blank">
+        <img src="https://img.shields.io/badge/GitHub-%23121011.svg?logo=github&logoColor=white">
+      </a>
+    </td>
+    <td>Feature Developer</td>
+  </tr>
 
-* Java’s threading and date-time API
-* Object-Oriented Programming principles
-* Healthcare communities promoting medication adherence
+  <tr>
+    <td><img src="static/dainell.jpg" width="100" height="100"></td>
+    <td>
+      <strong>Magtibay, Daiñell Jheff</strong><br/>
+      <a href="https://github.com/" target="_blank">
+        <img src="https://img.shields.io/badge/GitHub-%23121011.svg?logo=github&logoColor=white">
+      </a>
+    </td>
+    <td>Documentation Specialist</td>
+  </tr>
+
+</table>
+
+
+##  ‧₊˚ ┊ Acknowledgment
+We sincerely express our gratitude to our instructor for the guidance and support provided throughout the completion of this project. We also extend our appreciation to our classmates and peers for their cooperation and encouragement during the development process
 
 ---
 
