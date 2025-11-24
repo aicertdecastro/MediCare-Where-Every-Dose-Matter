@@ -277,7 +277,14 @@ Medication intake logged.
 
 
 ##  ‧₊˚ ┊ Acknowledgment
-We sincerely express our gratitude to our instructor for the guidance and support provided throughout the completion of this project. We also extend our appreciation to our classmates and peers for their cooperation and encouragement during the development process
+We sincerely express our gratitude to our instructors at CICS – Batangas State University, Alangilan Campus,
+for their continuous guidance and support throughout the development of this project. We also extend our appreciation 
+to our classmates and peers for their cooperation, encouragement, and valuable insights.
+
+## Special Thanks To:
+- Java’s threading and date-time API
+- Object-Oriented Programming principles
+- Healthcare communities promoting medication adherence
 
 ---
 
