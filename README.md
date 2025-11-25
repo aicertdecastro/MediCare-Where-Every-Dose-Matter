@@ -230,7 +230,7 @@ Medication intake logged.
   </tr>
 
   <tr>
-    <td><img src="static/aicert.jpg" width="100" height="100"></td>
+    <td><img src="https://github.com/aicertdecastro/MediCare-Where-Every-Dose-Matter/blob/main/creators/Aicert.jpg" width="100" height="100"></td>
     <td>
       <strong>De Castro, Aicert Reimiel</strong><br/>
       <a href="https://github.com/aicertdecastro" target="_blank">
@@ -241,7 +241,7 @@ Medication intake logged.
   </tr>
 
   <tr>
-    <td><img src="static/vhenise.jpg" width="100" height="100"></td>
+    <td><img src="https://github.com/aicertdecastro/MediCare-Where-Every-Dose-Matter/blob/main/creators/Cole.jpg" width="100" height="100"></td>
     <td>
       <strong>Bulaon, Vhenise Rich Cole</strong><br/>
       <a href="https://github.com/Ghost-910" target="_blank">
@@ -252,7 +252,7 @@ Medication intake logged.
   </tr>
 
   <tr>
-    <td><img src="static/nicko.jpg" width="100" height="100"></td>
+    <td><img src="https://github.com/aicertdecastro/MediCare-Where-Every-Dose-Matter/blob/main/creators/Nicko.jpg" width="100" height="100"></td>
     <td>
       <strong>Palicpic, Nicko</strong><br/>
       <a href="https://github.com/nickopalicpic" target="_blank">
@@ -263,7 +263,7 @@ Medication intake logged.
   </tr>
 
   <tr>
-    <td><img src="static/dainell.jpg" width="100" height="100"></td>
+    <td><img src="   " width="100" height="100"></td>
     <td>
       <strong>Magtibay, Daiñell Jheff</strong><br/>
       <a href="https://github.com/" target="_blank">
