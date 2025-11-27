@@ -259,10 +259,11 @@ Medication intake logged.
   </tr>
 
   <tr>
-    <td><img src="   " width="100" height="100"></td>
+    <td><img src="https://github.com/aicertdecastro/MediCare-Where-Every-Dose-Matter/blob/main/creators/Jeff.jpg" width="100" height="100"></td>
+    <td><img src="" width="100" height="100"></td>
     <td>
       <strong>Magtibay, Daiñell Jheff</strong><br/>
-      <a href="https://github.com/" target="_blank">
+      <a href="https://github.com/Aizishi" target="_blank">
         <img src="https://img.shields.io/badge/GitHub-%23121011.svg?logo=github&logoColor=white">
       </a>
     </td>
