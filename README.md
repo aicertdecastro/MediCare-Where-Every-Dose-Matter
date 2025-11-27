@@ -226,7 +226,6 @@ Medication intake logged.
   <tr>
     <th></th>
     <th>Name</th>
-    <th>Role</th>
   </tr>
 
   <tr>
@@ -237,7 +236,6 @@ Medication intake logged.
         <img src="https://img.shields.io/badge/GitHub-%23121011.svg?logo=github&logoColor=white">
       </a>
     </td>
-    <td>Lead Developer</td>
   </tr>
 
   <tr>
@@ -248,7 +246,6 @@ Medication intake logged.
         <img src="https://img.shields.io/badge/GitHub-%23121011.svg?logo=github&logoColor=white">
       </a>
     </td>
-    <td>System Designer</td>
   </tr>
 
   <tr>
@@ -259,7 +256,6 @@ Medication intake logged.
         <img src="https://img.shields.io/badge/GitHub-%23121011.svg?logo=github&logoColor=white">
       </a>
     </td>
-    <td>Feature Developer</td>
   </tr>
 
   <tr>
@@ -270,7 +266,6 @@ Medication intake logged.
         <img src="https://img.shields.io/badge/GitHub-%23121011.svg?logo=github&logoColor=white">
       </a>
     </td>
-    <td>Documentation Specialist</td>
   </tr>
 
 </table>
