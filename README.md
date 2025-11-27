@@ -260,7 +260,6 @@ Medication intake logged.
 
   <tr>
     <td><img src="https://github.com/aicertdecastro/MediCare-Where-Every-Dose-Matter/blob/main/creators/Jeff.jpg" width="100" height="100"></td>
-    <td><img src="" width="100" height="100"></td>
     <td>
       <strong>Magtibay, Daiñell Jheff</strong><br/>
       <a href="https://github.com/Aizishi" target="_blank">
