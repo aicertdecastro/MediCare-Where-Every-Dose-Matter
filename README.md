@@ -174,17 +174,23 @@ InvalidMedicationException.java
 *(User inputs shown in **bold**)*
 
 ```
-=== MediCare Menu ===
-1. Add Medication
-2. Edit Medication
-3. Delete Medication
-4. View Reminders
-5. Log Medication Intake
-6. View Medication History
-7. Add Wellness Feedback
-8. View Medication List
-9. Exit
+==========================================
+            MEDICARE MAIN MENU          
+==========================================
+  INVENTORY
+  1. Add Medication
+  2. Edit Medication
+  3. Delete Medication
+  8. View Medication List
 
+  PATIENT CARE
+  4. View Reminders
+  5. Log Intake
+  6. View History
+  7. Add Wellness Feedback
+------------------------------------------
+  9. Exit
+==========================================
 Choose an option: 1
 Medication name: Aspirin
 Dosage: 100mg
