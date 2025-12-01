@@ -181,13 +181,13 @@ InvalidMedicationException.java
   1. Add Medication
   2. Edit Medication
   3. Delete Medication
-  8. View Medication List
+  4. View Medication List
 
   PATIENT CARE
-  4. View Reminders
-  5. Log Intake
-  6. View History
-  7. Add Wellness Feedback
+  5. View Reminders
+  6. Log Intake
+  7. View History
+  8. Add Wellness Feedback
 ------------------------------------------
   9. Exit
 ==========================================
